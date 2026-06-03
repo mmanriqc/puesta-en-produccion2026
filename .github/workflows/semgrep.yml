@@ -20,9 +20,9 @@ jobs:
 
     steps:
      - name: Descargar repositorio
-    uses: actions/checkout@v4
+       uses: actions/checkout@v4
 
-    - name: Ejecutar Semgrep
-      run: semgrep scan --config=auto --error .
+     - name: Ejecutar Semgrep
+       run: semgrep scan --config=auto --error .
 
 
