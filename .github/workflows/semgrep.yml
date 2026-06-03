@@ -5,9 +5,9 @@ on:
     branches:
     - develop
 
-pull_request:
-  branches:
-  - develop
+    pull_request:
+      branches:
+      - develop
 
 jobs:
   semgrep:
@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
 
-container:
-  image: semgrep/semgrep
+    container:
+      image: semgrep/semgrep
 
-steps:
-  - name: Descargar repositorio
+    steps:
+     - name: Descargar repositorio
     uses: actions/checkout@v4
 
-  - name: Ejecutar Semgrep
-    run: semgrep scan --config=auto --error .
+    - name: Ejecutar Semgrep
+      run: semgrep scan --config=auto --error .
 
 
