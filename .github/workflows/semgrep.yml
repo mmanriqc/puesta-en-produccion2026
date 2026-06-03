@@ -3,11 +3,11 @@ name: Semgrep Security Scan
 on:
   push:
     branches:
-    - main
+    - develop
 
 pull_request:
   branches:
-  - main
+  - develop
 
 jobs:
   semgrep:
