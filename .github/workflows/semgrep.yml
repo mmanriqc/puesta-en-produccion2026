@@ -1,0 +1,27 @@
+name: Semgrep Security Scan
+
+on:
+push:
+branches:
+- main
+
+pull_request:
+branches:
+- main
+
+jobs:
+semgrep:
+name: Semgrep Analysis
+runs-on: ubuntu-latest
+
+```
+container:
+  image: semgrep/semgrep
+
+steps:
+  - name: Descargar repositorio
+    uses: actions/checkout@v4
+
+  - name: Ejecutar Semgrep
+    run: semgrep scan --config=auto .
+```
