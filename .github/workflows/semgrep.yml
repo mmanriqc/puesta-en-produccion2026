@@ -10,11 +10,10 @@ branches:
 - main
 
 jobs:
-semgrep:
-name: Semgrep Analysis
-runs-on: ubuntu-latest
+  semgrep:
+  name: Semgrep Analysis
+  runs-on: ubuntu-latest
 
-```
 container:
   image: semgrep/semgrep
 
@@ -24,5 +23,4 @@ steps:
 
   - name: Ejecutar Semgrep
     run: semgrep scan --config=auto .
-```
 
